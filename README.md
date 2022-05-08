@@ -44,7 +44,16 @@ SELECT count(*) QtdClientes FROM TbVendas WHERE Estado IN ('Santa Catarina', 'Ri
 SELECT count(DISTINCT CdCli) QtdClientes FROM TbVendas WHERE Estado IN ('Santa Catarina', 'Rio Grande do Sul', 'Paraná');
 ```
 
-Resultado:
+Resultado (vendas totais):
+
+![image](imagens/03.jpg)
+
+```sql
+SELECT count(*) QtdClientes FROM TbVendas WHERE Estado IN ('Santa Catarina', 'Rio Grande do Sul', 'Paraná');
+
+SELECT count(DISTINCT CdCli) QtdClientes FROM TbVendas WHERE Estado IN ('Santa Catarina', 'Rio Grande do Sul', 'Paraná');
+```
+Resultado (clientes exclusivos):
 
 ![image](imagens/03.jpg)
 
@@ -111,7 +120,7 @@ Resultado:
 
 ### Média do Valor Total de Vendas por Estado
 ```sql
-SELECT Estado, AVG(VrUnt*Qtd) AS Somatorio FROM TbVendas WHERE Status='Concluído' AND deletado=0 GROUP BY Estado;
+SELECT Estado, AVG(VrUnt*Qtd) AS Media FROM TbVendas GROUP BY Estado;
 ```
 
 Resultado:
@@ -333,17 +342,17 @@ Resultado:
 ```sql
 SELECT dep.NmDep Dependente, dep.InepEscola, escolas.Escola 
 FROM TbDependente dep
-JOIN Censo2020.TbEscolas escolas ON escolas.CO_ENTIDADE = dep.InepEscola
+JOIN Censo2020.TbEscolas escolas ON escolas.CODINEP = dep.InepEscola
 ```
 
-Resultado:
+Resultado :
 
 ![image](imagens/26-1.jpg)
 
 ```sql
 SELECT dep.NmDep Dependente, dep.InepEscola, escolas.Escola 
 FROM TbDependente dep
-LEFT JOIN Censo2020.TbEscolas escolas ON escolas.CO_ENTIDADE = dep.InepEscola
+LEFT JOIN Censo2020.TbEscolas escolas ON escolas.CODINEP = dep.InepEscola
 ```
 
 Resultado:
