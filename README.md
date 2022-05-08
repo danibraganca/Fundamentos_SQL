@@ -40,22 +40,18 @@ Resultado:
 ### Quantidade de clientes da região sul
 ```sql
 SELECT count(*) QtdClientes FROM TbVendas WHERE Estado IN ('Santa Catarina', 'Rio Grande do Sul', 'Paraná');
-
-SELECT count(DISTINCT CdCli) QtdClientes FROM TbVendas WHERE Estado IN ('Santa Catarina', 'Rio Grande do Sul', 'Paraná');
 ```
 
 Resultado (vendas totais):
 
-![image](imagens/03.jpg)
+![image](imagens/03-1.jpg)
 
 ```sql
-SELECT count(*) QtdClientes FROM TbVendas WHERE Estado IN ('Santa Catarina', 'Rio Grande do Sul', 'Paraná');
-
 SELECT count(DISTINCT CdCli) QtdClientes FROM TbVendas WHERE Estado IN ('Santa Catarina', 'Rio Grande do Sul', 'Paraná');
 ```
 Resultado (clientes exclusivos):
 
-![image](imagens/03.jpg)
+![image](imagens/03-2.jpg)
 
 
 ### Uma descrição breve dos produtos da empresa (codigo, nome, tipo)
@@ -177,8 +173,6 @@ Resultado:
 ![image](imagens/14-6.jpg)
 ![image](imagens/14-7.jpg)
 ![image](imagens/14-8.jpg)
-![image](imagens/14-9.jpg)
-![image](imagens/14-10.jpg)
 
 
 ### Relação com o nome dos vendedores e seus respectivos filhos (dependentes - nome e data de nascimento) -- montar uma view com estes dados
@@ -211,7 +205,14 @@ SELECT * FROM VwVendas
 
 Resultado:
 
-![image](imagens/16.jpg)
+![image](imagens/16-1.jpg)
+![image](imagens/16-2.jpg)
+![image](imagens/16-3.jpg)
+![image](imagens/16-4.jpg)
+![image](imagens/16-5.jpg)
+![image](imagens/16-6.jpg)
+![image](imagens/16-7.jpg)
+![image](imagens/16-8.jpg)
 
 
 ### View de quantidade de vendas por canal
