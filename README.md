@@ -346,7 +346,7 @@ FROM TbDependente dep
 JOIN Censo2020.TbEscolas escolas ON escolas.CODINEP = dep.InepEscola
 ```
 
-Resultado :
+Resultado (não existe escola com os IDs relacionados):
 
 ![image](imagens/26-1.jpg)
 
@@ -356,7 +356,7 @@ FROM TbDependente dep
 LEFT JOIN Censo2020.TbEscolas escolas ON escolas.CODINEP = dep.InepEscola
 ```
 
-Resultado:
+Resultado (realizando um relacionamento à esquerda para retorno dos dependentes):
 
 ![image](imagens/26-2.jpg)
 
@@ -364,7 +364,7 @@ Resultado:
 ```sql
 SELECT * FROM Censo2020.TbEscolas WHERE CODINEP IN (11019131, 11010860, 11018500, 11036680)
 ```
-Resultado:
+Resultado (consultando as escolas pelo código):
 
 ![image](imagens/26-3.jpg)
 
@@ -372,6 +372,6 @@ Resultado:
 SELECT * FROM Censo2020.TbEscolas limit 10
 ```
 
-Resultado:
+Resultado (somente mostrando a tabela do censo escolar carregada):
 
 ![image](imagens/26-4.jpg)
