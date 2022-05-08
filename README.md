@@ -160,7 +160,16 @@ INNER JOIN TbVendedor Ve ON V.CdVdd = Ve.CdVdd;
 
 Resultado:
 
-![image](imagens/14.jpg)
+![image](imagens/14-1.jpg)
+![image](imagens/14-2.jpg)
+![image](imagens/14-3.jpg)
+![image](imagens/14-4.jpg)
+![image](imagens/14-5.jpg)
+![image](imagens/14-6.jpg)
+![image](imagens/14-7.jpg)
+![image](imagens/14-8.jpg)
+![image](imagens/14-9.jpg)
+![image](imagens/14-10.jpg)
 
 
 ### Relação com o nome dos vendedores e seus respectivos filhos (dependentes - nome e data de nascimento) -- montar uma view com estes dados
@@ -216,7 +225,7 @@ Resultado:
 ```sql
 SELECT * FROM TbVendedor WHERE NmVdd='Vendedor 6'
 ```
-Resultado:
+Resultado (não existe vendedor com o nome 'Vendedor 6' exatamente:
 
 ![image](imagens/18-1.jpg)
 
@@ -224,7 +233,7 @@ Resultado:
 SELECT * FROM TbVendedor WHERE NmVdd='Vendedor  6  '
 ```
 
-Resultado:
+Resultado (ajustando a consulta para 'Vendedor  6  '):
 
 ![image](imagens/18-2.jpg)
 
@@ -253,7 +262,8 @@ WHERE DtVen BETWEEN '2011-09-11' AND '2012-09-03'
 
 Resultado:
 
-![image](imagens/20.jpg)
+![image](imagens/20-1.jpg)
+![image](imagens/20-2.jpg)
 
 
 ### Retornar o nome do produto (apenas os 5 primeiros caracteres) e a quantidade de venda com 10 dígitos, completando com zeros a esquerda.
