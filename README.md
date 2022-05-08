@@ -309,7 +309,7 @@ INNER JOIN TbEstoqueProduto E ON V.CdPro = E.CdPro
 WHERE E.`Status` = 'MVP - validação'
 ```
 
-Resultado:
+Resultado (Sim, existiram. As vendas estão indicadas abaixo):
 
 ![image](imagens/23.jpg)
 
